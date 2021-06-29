@@ -2,7 +2,7 @@
 
 > ECMAScript 6 project with Webpack and Babel support for bundling and compiling to backward compatibility
 
-![Header](/meta/Header.png)
+![Header](/meta/header.png)
 
 ## Requirements
 
