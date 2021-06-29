@@ -1,6 +1,6 @@
 # Typescript Webpack
 
-> ECMAScript 6 project with Webpack and Babel support for bundling and compiling to backward compatibility
+> ECMAScript 6 project with Webpack and Typescript support for bundling and compiling to backward compatibility
 
 ![Header](/meta/header.png)
 
@@ -20,15 +20,15 @@ The Goal of this application is to bundle all the files in development process t
 
 ## Setup
 
-1. Download node and run the following command
+1. Download node and run the following command.
 
 ```bash
 npm install
 ```
 
-2. Start modifying the html, css and javascript files located in **src** folder
+2. Start modifying the html, css and javascript files located in **src** folder.
 
-3. To start livewatch just run  the following command
+3. To start livewatch just run  the following command.
 
 ```bash
 npm run start:dev
