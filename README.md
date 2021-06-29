@@ -2,7 +2,7 @@
 
 > ECMAScript 6 project with Webpack and Babel support for bundling and compiling to backward compatibility
 
-![Header](meta/Header.png)
+![Header](/meta/Header.png)
 
 ## Requirements
 
@@ -16,7 +16,7 @@
 
 The Goal of this application is to bundle all the files in development process to a single file called **bundle.js** which will be deployed as a single file with retrocompatibility.
 
-![Webpack Flowchart](meta/flowchart-webpack.png)
+![Webpack Flowchart](/meta/flowchart-webpack.png)
 
 ## Setup
 
