@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "types": ["googlemaps"],
         "outDir": "./dist/",
         "sourceMap": true,
         "strict": true,
@@ -9,7 +10,11 @@
         "moduleResolution": "node",
         "target": "es5",
         "allowJs": true,
-        "downlevelIteration": true
+        "downlevelIteration": true,
+        "lib": [
+            "es2016",
+            "dom"
+        ]
     },
     "include": [
         "./src/**/*",

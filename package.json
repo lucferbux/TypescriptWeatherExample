@@ -10,6 +10,7 @@
         "start:dev": "webpack serve --mode development"
     },
     "devDependencies": {
+        "@types/googlemaps": "^3.43.3",
         "css-loader": "^5.2.6",
         "favicons": "^6.2.2",
         "favicons-webpack-plugin": "^5.0.2",
