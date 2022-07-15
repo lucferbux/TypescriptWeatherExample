@@ -12,8 +12,11 @@ import foggy from '../images/foggy.png';
 
 export interface WeatherResponse {
     wind: Wind;
-    weather: Weather;
-    main: Main
+    weather: Weather[];
+    main: Main,
+    name: string;
+    cod: string;
+    message: string;
 }
 
 interface Wind {
@@ -58,14 +61,14 @@ export const WeatherIcon = {
     "50n": foggy,
 } as const;
 
-export const DayOfWeek = [
+export const DayOfWeek = [    
+    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday",
-    "Sunday"
+    "Saturday"
 ];
 
 export type WeatherIcontype = keyof typeof WeatherIcon;
