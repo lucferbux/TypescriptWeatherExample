@@ -35,6 +35,19 @@ $button-background-color-dark: #ad92fd;
 	clear: both;
 }
 
+.alert {
+	position: absolute;
+	border-radius: 25px;
+	top: 10%;
+	padding: 20px;
+	background-color: #f44336;
+	color: white;
+	opacity: 1;
+	transition: opacity 0.6s;
+	margin-bottom: 15px;
+	
+  }
+
 body {
 	margin: 0;
 	width: 100%;
