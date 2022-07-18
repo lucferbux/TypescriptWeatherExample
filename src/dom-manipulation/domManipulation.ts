@@ -98,3 +98,4 @@ export function displayLanguage(type: string) {
   const language = type == "es" ? es : en;
   buttonClick ? (buttonClick.textContent = language.change_location) : "";
 }
+
