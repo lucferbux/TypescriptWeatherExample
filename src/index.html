@@ -37,7 +37,13 @@
 
                     <div class="location-container"><button id="button-location" class="location-button"><span>Change location</span></button></div>
 
-                    <div class="location-container-input"><input placeholder="city..." id="weather-location-input" class="location-input"> </input></div>
+                    <div class="location-container-input"><input placeholder="city..." min="3" id="weather-location-input" class="location-input"> </input></div>
+                    <div class="today-info-container">
+                        <div class="today-info">
+                            <span id="error-description" class="value"></span>
+                            <img id="loading" class="loading-icon hide" src="images/loading.gif" alt="Loading"></img>
+                        </div>
+                    </div>
                 </div>
             </div>
 

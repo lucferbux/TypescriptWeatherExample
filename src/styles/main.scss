@@ -127,6 +127,12 @@ body {
 	left: 25px;
 }
 
+.loading-icon {
+	width: 40px;
+	height: 40px;
+	margin: 0px;
+  }
+
 .weather-icon {
   width: 60px;
   height: 60px;
@@ -280,4 +286,8 @@ body {
 	color: $text-color-light;
 	font-weight: 700;
 	
+}
+
+.hide{
+	display: none;
 }
