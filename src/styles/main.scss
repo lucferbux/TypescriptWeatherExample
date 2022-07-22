@@ -13,11 +13,12 @@ $link-color-dark: #ad92fd;
 $marker-color-ligth: #3913B8;
 $marker-color-dark: #ad92fd;
 
-$code-background-color-light: white;
+$code-background-color-ligth: white;
 $code-background-color-dark: black;
 
 $button-background-color-light: #3913B8;
 $button-background-color-dark: #ad92fd;
+
 
 
 
@@ -36,6 +37,7 @@ $button-background-color-dark: #ad92fd;
 }
 
 body {
+	
 	margin: 0;
 	width: 100%;
 	height: 100vh;
@@ -62,6 +64,7 @@ body {
 }
 
 .weather-side {
+	
 	position: relative;
 	height: 100%;
 	border-radius: 25px;
@@ -122,9 +125,16 @@ body {
 }
 
 .weather-container {
+	
 	position: absolute;
 	bottom: 25px;
 	left: 25px;
+}
+.arrow-container {
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	
 }
 
 .weather-icon {
@@ -132,6 +142,15 @@ body {
   height: 60px;
   margin: 0px;
 }
+.arrow-icon {
+	width: 60px;
+	height: 60px;
+	margin: 5px;
+	
+	
+	background-origin: weather-side;
+	
+  }
 
 .weather-icon.feather {
 	height: 60px;
@@ -155,8 +174,21 @@ body {
 	padding-top: 25px;
   min-width: 300px;
 }
+.gps-container {
+	position: relative;
+	float: right;
+	height: 100%;
+	padding-bottom: 30px;
+ 	 min-width: 300px;
+}
 
 .today-info {
+	padding: 10px;
+	margin: 0 25px 20px 25px;
+/* 	box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.25); */
+	border-radius: 10px;
+}
+.gps-info {
 	padding: 15px;
 	margin: 0 25px 25px 25px;
 /* 	box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.25); */
@@ -241,7 +273,7 @@ body {
 
 .location-button {
 	outline: none;
-	width: 100%;
+	width: 95%;
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
 	border: none;

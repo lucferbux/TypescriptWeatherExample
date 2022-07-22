@@ -16,28 +16,42 @@
                         <h1 id="weather-temp" class="weather-temp">--</h1>
                         <h3 id="weather-desc" class="weather-desc">-</h3>
                     </div>
+                    <div class="arrow-container"><img id="arrow-icon" class="arrow-icon" src="images/arrow.png"></img>
+                        <h4 id="wind-deg" class="wind-deg">-- °</h4>
+                    </div>
                 </div>
                 <div class="info-side">
                     <div class="today-info-container">
                         <div class="today-info">
-                            <div class="precipitation"> <span class="title">MAX TEMP</span><span id="text-temp-max" class="value">- ºC</span>
+                            <div class="precipitation"> <span class="title">Max Temp:</span><span id="text-temp-max" class="value">- ºC</span>
                                 <div class="clear"></div>
                             </div>
-                            <div class="precipitation"> <span class="title">MIN TEMP</span><span id="text-temp-min" class="value">- ºC</span>
+                            <div class="precipitation"> <span class="title">Min Temp:</span><span id="text-temp-min" class="value">- ºC</span>
                                 <div class="clear"></div>
                             </div>
-                            <div class="humidity"> <span class="title">HUMIDITY</span><span id="text-humidity" class="value">- %</span>
+                            <div class="humidity"> <span class="title">Humydity:</span><span id="text-humidity" class="value">- %</span>
                                 <div class="clear"></div>
                             </div>
-                            <div class="wind"> <span class="title">WIND</span><span id="text-wind" class="value">- m/s</span>
+                            <div class="wind"> <span class="title">Wind Speed:</span><span id="text-wind" class="value">- m/s</span>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="lat"> <span class="title">Gps lat:</span><span id="lat" class="value">: </span>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="lon"> <span class="title">Gps lon:</span><span id="lon" class="value">: </span>
                                 <div class="clear"></div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="location-container"><button id="button-location" class="location-button"><span>Change location</span></button></div>
-
+                   
                     <div class="location-container-input"><input placeholder="city..." id="weather-location-input" class="location-input"> </input></div>
+                         
+                    <div class="location-container">
+                        <button id="button-location" class="location-button"><span>Change location</span></button>
+                        <br><br/>
+                        <button id="button-get-location" class="location-button"><span>Get location</span></button>
+                    </div>
+                    
                 </div>
             </div>
 
