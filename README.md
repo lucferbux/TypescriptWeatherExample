@@ -1,5 +1,30 @@
 # Typescript Webpack
 
+# Actualización de aplicación 
+ Se realiza actualización de aplicación agregando nuevas funcionalidades y métodos de captura de errores de búsqueda 
+
+ Al realizar una búsqueda que no encuentre un resultado, lo indicara a través de un “alert”.
+ en caso de no tener una respuesta de la api, enviara el error a la consola.
+ se agrega un indicador de dirección de viento el cual se direcciona en función de la dirección del viento, además acompaña grados y notación cardinal.
+
+ Se añade botón para encontrar la ubicación actual, con lo cual realiza una búsqueda por ubicación GPS lo que requiere un nuevo método para encontrar resultado a través de coordenadas 
+
+ Se agregaron indicadores GPS (latitud, longitud), los que indican la posición GPS de la ubicación buscada 
+
+ Se agregaron spinners en los botones de búsqueda para indicar el estado de búsqueda, se agregó un timeout para visualizar de mejor manera el spinner
+ La última ciudad buscada queda almacenada en localstorage la que será consultada en caso de refrescar la pagina para obtener nuevos datos de la última ubicación encontrada
+
+    Dspliegue de aplicacion en: https://prgm-weather-app.netlify.app/
+                            
+ ![Header](/meta/aplicacion-actualizada.png)
+
+
+
+
+
+
+
+
 > ECMAScript 6 project with Webpack and Typescript support for bundling and compiling to backward compatibility
 
 ![Header](/meta/header.png)
