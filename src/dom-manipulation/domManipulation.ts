@@ -1,4 +1,4 @@
-import { DayOfWeek, WeatherIcon, WeatherIcontype, WeatherResponse } from "../model/weatherResponse";
+import { DayOfWeek, WeatherIcon, WeatherIcontype, WeatherResponse,winDir } from "../model/weatherResponse";
 
 // TODO: Create references for all the html elements
 export const buttonClick = document.getElementById("button-location");
@@ -20,6 +20,8 @@ const windDeg = document.getElementById("wind-deg")
 const lat =document.getElementById("lat");
 const lon = document.getElementById("lon");
 
+
+
 // TODO: Create the logic of the function
 export const updateInteface = (weather: WeatherResponse) :void => {
     
@@ -37,11 +39,12 @@ export const updateInteface = (weather: WeatherResponse) :void => {
     
     if (wind) wind.textContent = weather.wind.speed .toString() + " m/s";
 
-    let deg =  weather.wind.deg.toString();
+    const deg =  weather.wind.deg;
     if(arrowImg) arrowImg.style.transform = `rotate(${deg}deg)`;
-    if (windDeg) windDeg.textContent = 'Wind '+deg +'°';
+    if (windDeg) windDeg.textContent = deg +'° '+winDir(deg);
     if (lon) lon.textContent = weather.coord.lon.toString();
     if (lat) lat.textContent = weather.coord.lat.toString();
+  
 
 }
  
@@ -55,6 +58,7 @@ export function getCity(): string {
 
 function getDayOfWeek(): string {
     let day = new Date();
+    console.log(day.getDay())
     return DayOfWeek[day.getDay()];
 }
 
@@ -81,3 +85,40 @@ function validateImage(values: string[]): asserts values is WeatherIcontype[] {
 function isValidImage(value: string): value is WeatherIcontype {
     return value in WeatherIcon;
 }
+
+
+// funciones para agregar spinner a los botones muentras carga las peticiones 
+export function spinner() {
+   if (buttonClick){
+    buttonClick.innerHTML = `<div class="spinner" id="spinner"></div>`;
+    
+   }
+    return
+} 
+export function spinner2() {
+    if (buttonGetClick){
+        buttonGetClick.innerHTML = `<div class="spinner" id="spinner"></div>`;
+    }
+     return
+ } 
+
+ // se agrega un timeout  solo para visualisacion del spinner
+ export function noSpinner() {
+    if (buttonClick){
+        setTimeout(() => {
+            buttonClick.innerHTML = `Change location`;
+        }, 800);
+     
+    }
+     return
+ } 
+ export function noSpinner2() {
+     if (buttonGetClick){
+        setTimeout(() => {
+            buttonGetClick.innerHTML = `Get location`;
+        }, 800);
+         
+     }
+      return
+  } 
+
