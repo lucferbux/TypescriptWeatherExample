@@ -28,6 +28,20 @@ En el package.json, seccion scripts agregar
  Alli funciona el npm run start:dev (que ejecuta el script llamado start:dev del pacakge.json) !!
 
 
+"start": "NODE_OPTIONS=--openssl-legacy-provider npm-run-all",
+
+D:\JCode\FullStack\01Javascript\TypescriptWeatherExample
+
+Corre en 
+http://localhost:9000/
+
+ 
+        "favicons": "^6.2.2" cambio a "favicons": "^7.0.2"
+        "node-sass": "^6.0.1" cambio a "sass": "^1.49.9"
+        "webpack-dev-server": "^3.11.2" cambio a "webpack-dev-server": "^4.11.1"
+
+
+
 Solucion 2 (no anduvo )
 
 
