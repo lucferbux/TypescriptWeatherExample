@@ -1,3 +1,26 @@
+Solucion 1
+En package.json y package-lock.json
+    Reemplazar "node-saas": "^6.0.2"  con sass": "^1.49.9"
+
+Hacer los arreglos sugeridos por npm audit
+    npm audit fix
+    npm audit fix --force
+
+Uno de los audits va a cambiar la version del webpack dev server a 4.11.1
+Hay que cambiar en el webpack.config.js
+
+contentBase: path.join(__dirname, "public"),
+
+por
+
+static: {
+      directory: path.join(__dirname, "public")
+    },
+
+
+Solucion 2 (no anduvo )
+
+
 Para instalar npm install correctamente
     - Fallaba al instalar node-saas
     - Al parecer, faltaba algo en un instalador interno de npm, llamado node-gyp
