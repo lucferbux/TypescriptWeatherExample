@@ -1,0 +1,20 @@
+Para instalar npm install correctamente
+    - Fallaba al instalar node-saas
+    - Al parecer, faltaba algo en un instalador interno de npm, llamado node-gyp
+    - Instale python 2.7 y cree una variable de entorno llamda PYTHON que apunta al exe
+    - Instale windows build tolls ( npm i -g windows-build-tools)
+        En realidad, este comando solamente bajo python y visual studio tools para instalar.
+        Las instale manualmente, primero python y luego visual studio tools (solamente las Visual Studio C++ core features)
+    - Instale el node-gyp interno que usa npm (al parecer usa su propio node-gyp a pesar de que haya uno instalado globalmente)
+        Ver https://github.com/nodejs/node-gyp/blob/main/docs/Updating-npm-bundled-node-gyp.md
+    - Luego de instalado todo esto, al hacer npm install, el node-saas seguia fallando, entonces
+        1) Saque la linea que tenia la referencia al node-saas de package.json y package-lock.json
+        2) Guarde los originales, e hice 2 nuevos archivos sin esa linea
+        3) hice el npm install, que corrio bien, instalo todo menos el node-saas
+        4) Instale el node-saas por si solo, manualmente (npm install node-saas), funciono bien
+        5) Volvi a las versiones originales del package.json y package-lock.json
+    - Para chequear que todos los paquetes necesarios (segun el package.json) estan instalados en el proyecto (carpeta node-modules),
+      hice npm list --depth=0
+      Compare el resultado con el package.json
+      Lo unico distinto es que el node-saas del package.json era 6.0.2 y el instalado fue el 8.0.0
+      Actualice package.json y package-lock.json a esta version 8.0.0
