@@ -4,7 +4,6 @@
     "description": "Template of a Webpack Babel project",
     "main": "index.js",
     "scripts": {
-        "start": "NODE_OPTIONS=--openssl-legacy-provider npm-run-all",
         "clean": "rm dist/bundle.js",
         "build-dev": "webpack --mode development",
         "build-prod": "webpack --mode production",

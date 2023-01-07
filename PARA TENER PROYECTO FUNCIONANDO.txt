@@ -9,18 +9,23 @@ Hacer los arreglos sugeridos por npm audit
 Uno de los audits va a cambiar la version del webpack dev server a 4.11.1
 Hay que cambiar en el webpack.config.js
 
-contentBase: path.join(__dirname, "public"),
+    contentBase: path.join(__dirname, "public"),
 
 por
 
-static: {
-      directory: path.join(__dirname, "public")
-    },
+    static: {
+        directory: path.join(__dirname, "public")
+        },
 
 
 En el package.json, seccion scripts agregar
- "start": "NODE_OPTIONS=--openssl-legacy-provider npm-run-all ...",
- se supone que todos los npm start que se hagan reciben el NODE_OPTIONS seteado, y esta dando error por eso
+    "start": "NODE_OPTIONS=--openssl-legacy-provider npm-run-all",
+    se supone que todos los npm start que se hagan reciben el NODE_OPTIONS seteado, y esta dando error por eso
+
+ En Windows, 
+    crear una variable de entorno llamada NODE_OPTIONS, ponerle el valor --openssl-legacy-provider
+
+ Alli funciona el npm run start:dev (que ejecuta el script llamado start:dev del pacakge.json) !!
 
 
 Solucion 2 (no anduvo )
