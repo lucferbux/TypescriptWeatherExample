@@ -13,3 +13,8 @@ let city = "Montevideo"
 const API_CURRENT = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=edf15743627917f811f1c682477b6251&units=metric`
 
 // TODO: Create an async function with an argument called city to return the that of the endpoint
+/*
+const getWeatherFromAPI = (city:string) : WeatherResponse => {
+    return a as WeatherResponse
+
+}*/
