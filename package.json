@@ -4,10 +4,11 @@
     "description": "Template of a Webpack Babel project",
     "main": "index.js",
     "scripts": {
+        "start": "NODE_OPTIONS=--openssl-legacy-provider npm-run-all",
         "clean": "rm dist/bundle.js",
         "build-dev": "webpack --mode development",
         "build-prod": "webpack --mode production",
-        "start:dev": "webpack serve --mode development"
+        "start:dev": "webpack serve --mode development "
     },
     "devDependencies": {
         "css-loader": "^5.2.6",

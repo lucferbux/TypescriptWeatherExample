@@ -18,6 +18,11 @@ static: {
     },
 
 
+En el package.json, seccion scripts agregar
+ "start": "NODE_OPTIONS=--openssl-legacy-provider npm-run-all ...",
+ se supone que todos los npm start que se hagan reciben el NODE_OPTIONS seteado, y esta dando error por eso
+
+
 Solucion 2 (no anduvo )
 
 
