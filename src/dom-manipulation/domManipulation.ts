@@ -3,6 +3,8 @@ import { DayOfWeek, WeatherIcon, WeatherIcontype, WeatherResponse } from "../mod
 // TODO: Create references for all the html elements
 export const buttonClick = document.getElementById("button-location");
 const WeatherIconPng = document.getElementById("weather-icon");
+const cityImput = document.getElementById("weather-location-input");
+const actual_temperature = document.getElementById("weather-temp");
 
 
 // TODO: Create the logic of the function
@@ -12,6 +14,9 @@ export const updateInteface = (weather: WeatherResponse) :void => {
 
 // TODO: Get the city from the input element
 export function getCity(): string {
+    if (cityImput !== undefined){
+        return (cityImput as HTMLInputElement).value;
+    }
     return "";
 }
 
