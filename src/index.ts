@@ -7,7 +7,7 @@ import {getWeatherFromApi} from './networking/weather';
 // Import the WeatherResponse Interface
 import { WeatherResponse } from './model/weatherResponse';
 
-import { buttonClick, getCity, updateInteface } from './dom-manipulation/domManipulation';
+import { buttonClick, getCity, updateInterface, cleanInterface } from './dom-manipulation/domManipulation';
 
 // Create an async function to call the API method
 // Esta funcion se llama al hacer click en el boton, debe ser la que llama el eventListener
@@ -15,16 +15,21 @@ const showWeather = async ()  => {
     let city : string;
     let response : WeatherResponse;
 
+    cleanInterface(); // limpiar los datos anteriores
+
     city = getCity(); // Obtener la ciudad para la cual voy a mostrar el clima
-    //alert(`getcity me dio ${city}`)
     if (city=="") {
         alert("Debe ingresar una ciudad.");
-        return
+        return;
     }
     try {
         response = await getWeatherFromApi(city); // Obtener datos de la Api
         console.log(response);
-        updateInteface(response); 
+        if (response.cod !== undefined && response.cod == "404"){
+            alert("Ciudad no encontrada");
+            return;
+        }
+        updateInterface(response); 
 
     }
     catch (err) {

@@ -11,10 +11,12 @@ import foggy from '../images/foggy.png';
 // TODO: Create the interface of Weather Response
 
 export interface WeatherResponse {
+    cod: number | string
 
 }
 
 interface Wind {
+
 
 }
 

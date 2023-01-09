@@ -8,8 +8,17 @@ const actual_temperature = document.getElementById("weather-temp");
 
 
 // TODO: Create the logic of the function
-export const updateInteface = (weather: WeatherResponse) :void => {
-    
+export const updateInterface = (weather: WeatherResponse) :void => {
+    if (actual_temperature !== undefined){
+        (actual_temperature as HTMLHeadingElement).textContent= "20";
+    }
+}
+
+// Crear una funcion para dejar limpio los datos del clima
+export const cleanInterface = (): void => {
+    if (actual_temperature !== undefined){
+        (actual_temperature as HTMLHeadingElement).textContent= "";    
+    }
 }
 
 // TODO: Get the city from the input element
