@@ -23,6 +23,7 @@ const showWeather = async ()  => {
         return;
     }
     try {
+        (buttonClick as HTMLButtonElement).disabled = true;
         response = await getWeatherFromApi(city); // Obtener datos de la Api
         console.log(response);
         if (response.cod !== 200){
@@ -34,6 +35,9 @@ const showWeather = async ()  => {
     }
     catch (err) {
         alert(`No hay datos para ${city}`)
+    }
+    finally {
+        (buttonClick as HTMLButtonElement).disabled = false;
     }
 }
 
