@@ -25,7 +25,7 @@ const showWeather = async ()  => {
     try {
         response = await getWeatherFromApi(city); // Obtener datos de la Api
         console.log(response);
-        if (response.cod !== undefined && response.cod == "404"){
+        if (response.cod !== 200){
             alert("Ciudad no encontrada");
             return;
         }

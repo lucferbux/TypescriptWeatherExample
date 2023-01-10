@@ -10,7 +10,7 @@ const actual_temperature = document.getElementById("weather-temp");
 // TODO: Create the logic of the function
 export const updateInterface = (weather: WeatherResponse) :void => {
     if (actual_temperature !== undefined){
-        (actual_temperature as HTMLHeadingElement).textContent= "20";
+        (actual_temperature as HTMLHeadingElement).textContent= weather.main.temp.toString();
     }
 }
 

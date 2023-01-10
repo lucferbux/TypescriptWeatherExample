@@ -26,7 +26,7 @@ export const getWeatherFromApi = async (city: string) :Promise<WeatherResponse> 
         let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=edf15743627917f811f1c682477b6251&units=metric`, requestOptions);
         return response.json();
     }   
-    catch {
-        throw new Error(`Fetch Api para parametro ${city} no encontro datos`);
+    catch (err) {
+        throw new Error(`Error consumiendo API openweathermap.org`);
     }
 } 
