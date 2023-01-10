@@ -8,7 +8,7 @@ const actual_temperature = document.getElementById("weather-temp");
 const dateDayName = document.getElementById("date-dayname");
 const dateDayNumber = document.getElementById("date-day");
 const locationText = document.getElementById("location-text");
-const weatherIcon = document.getElementById("weather-icon");
+const weatherDesc = document.getElementById("weather-desc");
 
 
 // TODO: Create the logic of the function
@@ -25,11 +25,17 @@ export const updateInterface = (weather: WeatherResponse) :void => {
     if (locationText !== undefined) {
         (locationText as HTMLSpanElement).textContent = weather.name;
     }            
+    // considero siempre el primer elemento del array weather como el valido
+    changeWeatherIcon(weather.weather[0].icon); 
+    if (weatherDesc !== undefined) {
+        (weatherDesc as HTMLHeadingElement).textContent = weather.weather[0].main + " - " + weather.weather[0].description;
+    }            
 
 }
 
 // Crear una funcion para dejar limpio los datos del clima
 export const cleanInterface = (): void => {
+
     if (actual_temperature !== undefined){
         (actual_temperature as HTMLHeadingElement).textContent= "-";    
     }
@@ -41,6 +47,10 @@ export const cleanInterface = (): void => {
     }            
     if (locationText !== undefined) {
         (locationText as HTMLSpanElement).textContent = "-";
+    }                
+    changeWeatherIcon("initialIcon");
+    if (weatherDesc !== undefined) {
+        (weatherDesc as HTMLHeadingElement).textContent = "-";
     }                
 }
 

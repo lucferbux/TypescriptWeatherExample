@@ -7,6 +7,7 @@ import drizzle from '../images/drizzle.png';
 import thunderstroms from '../images/thunderstroms.png';
 import snow from '../images/snow.png';
 import foggy from '../images/foggy.png';
+import initialIcon from '../images/empty.png';
 
 // TODO: Create the interface of Weather Response
 
@@ -83,6 +84,7 @@ export const WeatherIcon = {
     "13n": snow,
     "50d": foggy,
     "50n": foggy,
+    "initialIcon": initialIcon,
 } as const;
 
 export const DayOfWeek = [
