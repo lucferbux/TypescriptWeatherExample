@@ -27,6 +27,6 @@ export const getWeatherFromApi = async (city: string) :Promise<WeatherResponse> 
         return response.json();
     }   
     catch (err) {
-        throw new Error(`Error consumiendo API openweathermap.org`);
+        throw new Error(`Error consumiendo API openweathermap.org : ${err}`);
     }
 } 

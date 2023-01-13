@@ -1,50 +1,51 @@
 import { DayOfWeek, WeatherIcon, WeatherIcontype, WeatherResponse } from "../model/weatherResponse";
 
 // TODO: Create references for all the html elements
-export const buttonClick = document.getElementById("button-location");
-const WeatherIconPng = document.getElementById("weather-icon");
-const cityImput = document.getElementById("weather-location-input");
-const actualTemperature = document.getElementById("weather-temp");
-const dateDayName = document.getElementById("date-dayname");
-const dateDayNumber = document.getElementById("date-day");
-const locationText = document.getElementById("location-text");
-const weatherDesc = document.getElementById("weather-desc");
-const maxTemperature = document.getElementById("text-temp-max");
-const minTemperature = document.getElementById("text-temp-min");
-const humidity = document.getElementById("text-humidity");
-const windSpeed = document.getElementById("text-wind");
+export const buttonClick = (document.getElementById("button-location") as HTMLButtonElement);
+const WeatherIconPng = (document.getElementById("weather-icon") as HTMLImageElement);
+const cityImput = (document.getElementById("weather-location-input") as HTMLInputElement);
+const actualTemperature = (document.getElementById("weather-temp") as HTMLHeadingElement);
+const dateDayName = (document.getElementById("date-dayname") as HTMLHeadingElement);
+const dateDayNumber = (document.getElementById("date-day") as HTMLSpanElement);
+const locationText = (document.getElementById("location-text") as HTMLSpanElement);
+const weatherDesc = (document.getElementById("weather-desc") as HTMLHeadingElement);
+const maxTemperature = (document.getElementById("text-temp-max") as HTMLSpanElement);
+const minTemperature = (document.getElementById("text-temp-min") as HTMLSpanElement);
+const humidity = (document.getElementById("text-humidity") as HTMLSpanElement);
+const windSpeed = (document.getElementById("text-wind") as HTMLSpanElement);
 
 
 // TODO: Create the logic of the function
 export const updateInterface = (weather: WeatherResponse) :void => {
     if (actualTemperature !== undefined){
-        (actualTemperature as HTMLHeadingElement).textContent= Math.round( weather.main.temp).toString() + " ºC";
+        actualTemperature.textContent = Math.round( weather.main.temp).toString() + " ºC";
     }
     if (dateDayName !== undefined) {
-        (dateDayName as HTMLHeadingElement).textContent = getDayOfWeek();
+        dateDayName.textContent = getDayOfWeek();
     }        
     if (dateDayNumber !== undefined) {
-        (dateDayNumber as HTMLSpanElement).textContent = getDate();
+        dateDayNumber.textContent = getDate();
     }        
     if (locationText !== undefined) {
-        (locationText as HTMLSpanElement).textContent = weather.name + " - " + weather.sys.country;
+        locationText.textContent = weather.name + " - " + weather.sys.country;
     }            
     // considero siempre el primer elemento del array weather como el valido
     changeWeatherIcon(weather.weather[0].icon); 
+
     if (weatherDesc !== undefined) {
-        (weatherDesc as HTMLHeadingElement).textContent =  weather.weather[0].main + " - " + weather.weather[0].description;
+        weatherDesc.textContent =  weather.weather[0].main + " - " + weather.weather[0].description;
     }        
     if (maxTemperature !== undefined) {
-        (maxTemperature as HTMLSpanElement).textContent = Math.round(weather.main.temp_max).toString() + " ºC";
+        maxTemperature.textContent = Math.round(weather.main.temp_max).toString() + " ºC";
     }         
     if (minTemperature !== undefined) {
-        (minTemperature as HTMLSpanElement).textContent = Math.round(weather.main.temp_min).toString() + " ºC";
+        minTemperature.textContent = Math.round(weather.main.temp_min).toString() + " ºC";
     }      
     if (humidity !== undefined) {
-        (humidity as HTMLSpanElement).textContent = weather.main.humidity.toString() + " %";
+        humidity.textContent = weather.main.humidity.toString() + " %";
     }                         
     if (windSpeed !== undefined) {
-        (windSpeed as HTMLSpanElement).textContent = Math.round(weather.wind.speed).toString() +" m/s";
+        windSpeed.textContent = Math.round(weather.wind.speed).toString() +" m/s";
     }         
 }
 
@@ -52,39 +53,41 @@ export const updateInterface = (weather: WeatherResponse) :void => {
 export const cleanInterface = (): void => {
 
     if (actualTemperature !== undefined){
-        (actualTemperature as HTMLHeadingElement).textContent= "-";    
+        actualTemperature.textContent = "-";    
     }
     if (dateDayName !== undefined) {
-        (dateDayName as HTMLHeadingElement).textContent = "-";
+        dateDayName.textContent = "-";
     }        
     if (dateDayNumber !== undefined) {
-        (dateDayNumber as HTMLSpanElement).textContent = "-";
+        dateDayNumber.textContent = "-";
     }            
     if (locationText !== undefined) {
-        (locationText as HTMLSpanElement).textContent = "-";
+        locationText.textContent = "-";
     }                
+    
     changeWeatherIcon("initialIcon");
+
     if (weatherDesc !== undefined) {
-        (weatherDesc as HTMLHeadingElement).textContent = "-";
+        weatherDesc.textContent = "-";
     }                
     if (maxTemperature !== undefined) {
-        (maxTemperature as HTMLSpanElement).textContent = "- ºC";
+        maxTemperature.textContent = "- ºC";
     }                        
     if (minTemperature !== undefined) {
-        (minTemperature as HTMLSpanElement).textContent = "- ºC";
+        minTemperature.textContent = "- ºC";
     }           
     if (humidity !== undefined) {
-        (humidity as HTMLSpanElement).textContent = "- %"
+        humidity.textContent = "- %"
     }      
     if (windSpeed !== undefined) {
-        (windSpeed as HTMLSpanElement).textContent = "- m/s";
+        windSpeed.textContent = "- m/s";
     }                                                  
 }
 
 // TODO: Get the city from the input element
 export function getCity(): string {
     if (cityImput !== undefined){
-        return (cityImput as HTMLInputElement).value;
+        return cityImput.value;
     }
     return "";
 }
@@ -104,7 +107,7 @@ function changeWeatherIcon(weatherImageRef: string) {
     validateImage(weatherMap);
     const mappedWeather = weatherMap.map(weather => WeatherIcon[weather])[0] ?? WeatherIcon["01d"];
     if(typeof mappedWeather[0] === "string") {
-        if (WeatherIconPng) (WeatherIconPng as HTMLImageElement).src = mappedWeather;
+        if (WeatherIconPng) WeatherIconPng.src = mappedWeather;
     }
 }
 

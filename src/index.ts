@@ -23,7 +23,7 @@ const showWeather = async ()  => {
         return;
     }
     try {
-        (buttonClick as HTMLButtonElement).disabled = true;
+        buttonClick.disabled = true;
         response = await getWeatherFromApi(city); // Obtener datos de la Api
         console.log(response);
         if (response.cod !== 200){
@@ -37,7 +37,8 @@ const showWeather = async ()  => {
         alert(`No hay datos para ${city}`)
     }
     finally {
-        (buttonClick as HTMLButtonElement).disabled = false;
+        // agrego el disabled = false aqui para que tanto en exito/error se vuelva a habilitar el boton
+        buttonClick.disabled = false;
     }
 }
 
