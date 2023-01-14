@@ -3,6 +3,7 @@ coverage/
 dist/*
 !dist/index.html
 node_modules/
+.tempChromeProfileForDebug/
 *.log
 
 # OS generated files
