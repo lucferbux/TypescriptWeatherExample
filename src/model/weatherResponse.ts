@@ -88,13 +88,13 @@ export const WeatherIcon = {
 } as const;
 
 export const DayOfWeek = [
+    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday",
-    "Sunday"
+    "Saturday"
 ];
 
 export type WeatherIcontype = keyof typeof WeatherIcon;
