@@ -6,8 +6,8 @@ const WeatherIconPng = document.getElementById("weather-icon");
 
 
 // TODO: Create the logic of the function
-export const updateInteface = (weather: WeatherResponse) :void => {
-    
+export const updateInteface = (weather: WeatherResponse): void => {
+
 }
 
 // TODO: Get the city from the input element
@@ -29,14 +29,14 @@ function changeWeatherIcon(weatherImageRef: string) {
     const weatherMap = [weatherImageRef];
     validateImage(weatherMap);
     const mappedWeather = weatherMap.map(weather => WeatherIcon[weather])[0] ?? WeatherIcon["01d"];
-    if(typeof mappedWeather[0] === "string") {
+    if (typeof mappedWeather[0] === "string") {
         if (WeatherIconPng) (WeatherIconPng as HTMLImageElement).src = mappedWeather;
     }
 }
 
 function validateImage(values: string[]): asserts values is WeatherIcontype[] {
     if (!values.every(isValidImage)) {
-        throw Error('invalid image');    
+        throw Error('invalid image');
     }
 }
 

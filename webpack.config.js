@@ -3,6 +3,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const Dotenv = require('dotenv-webpack');
 
 const config = {
   entry: "./src/index.ts",
@@ -48,6 +49,7 @@ const config = {
     }),
     new MiniCssExtractPlugin(),
     new FaviconsWebpackPlugin("./src/images/icon.png"),
+    new Dotenv(),
   ],
   resolve: {
     extensions: [".tsx", ".ts", ".js"],

@@ -11,6 +11,7 @@
     },
     "devDependencies": {
         "css-loader": "^6.7.3",
+        "dotenv-webpack": "^8.0.1",
         "favicons": "^7.0.2",
         "favicons-webpack-plugin": "^6.0.0",
         "file-loader": "^6.2.0",
