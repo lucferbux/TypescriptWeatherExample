@@ -7,15 +7,31 @@ const WeatherIconPng = document.getElementById("weather-icon");
 // TODO: Create the logic of the function
 export const updateInteface = (weather: WeatherResponse): void => {
 
-    const temperatureMax = document.getElementById("text-temp-max") as HTMLHtmlElement
-    const temperatureMin = document.getElementById("text-temp-min") as HTMLInputElement
-    const humidity = document.getElementById("text-humidity") as HTMLInputElement
-    const wind = document.getElementById("text-wind") as HTMLInputElement
+    //Div - info side
+    const temperatureMax = document.getElementById("text-temp-max") as HTMLHtmlElement;
+    const temperatureMin = document.getElementById("text-temp-min") as HTMLInputElement;
+    const humidity = document.getElementById("text-humidity") as HTMLInputElement;
+    const wind = document.getElementById("text-wind") as HTMLInputElement;
 
-    temperatureMax.textContent = weather.main.temp_max.toString() + ' ºC'
-    temperatureMin.textContent = weather.main.temp_min.toString() + ' ºC'
-    humidity.textContent = weather.main.humidity.toString() + ' %'
-    wind.textContent = weather.wind.speed.toString() + ' m/s'
+    temperatureMax.textContent = weather.main.temp_max.toString() + ' ºC';
+    temperatureMin.textContent = weather.main.temp_min.toString() + ' ºC';
+    humidity.textContent = weather.main.humidity.toString() + ' %';
+    wind.textContent = weather.wind.speed.toString() + ' m/s';
+
+    //Div - weather side
+    const dateDayname = document.getElementById("date-dayname") as HTMLHtmlElement;
+    const currentDate = document.getElementById("date-day") as HTMLHtmlElement;
+    const location = document.getElementById("location-text") as HTMLHtmlElement;
+    const temperature = document.getElementById("weather-temp") as HTMLHtmlElement;
+    const weatherDesc = document.getElementById("weather-desc") as HTMLHtmlElement;
+
+    dateDayname.textContent = getDayOfWeek();
+    currentDate.textContent = getDate();
+    location.textContent = weather.name;
+    temperature.textContent = Math.floor(weather.main.temp).toString() + 'ºC';
+    weatherDesc.textContent = weather.weather[0].main;
+    changeWeatherIcon(weather.weather[0].icon)
+
 }
 
 // TODO: Get the city from the input element
