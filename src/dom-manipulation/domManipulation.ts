@@ -4,15 +4,24 @@ import { DayOfWeek, WeatherIcon, WeatherIcontype, WeatherResponse } from "../mod
 export const buttonClick = document.getElementById("button-location");
 const WeatherIconPng = document.getElementById("weather-icon");
 
-
 // TODO: Create the logic of the function
 export const updateInteface = (weather: WeatherResponse): void => {
 
+    const temperatureMax = document.getElementById("text-temp-max") as HTMLHtmlElement
+    const temperatureMin = document.getElementById("text-temp-min") as HTMLInputElement
+    const humidity = document.getElementById("text-humidity") as HTMLInputElement
+    const wind = document.getElementById("text-wind") as HTMLInputElement
+
+    temperatureMax.textContent = weather.main.temp_max.toString() + ' ºC'
+    temperatureMin.textContent = weather.main.temp_min.toString() + ' ºC'
+    humidity.textContent = weather.main.humidity.toString() + ' %'
+    wind.textContent = weather.wind.speed.toString() + ' m/s'
 }
 
 // TODO: Get the city from the input element
 export function getCity(): string {
-    return "";
+    const weatherInput = document.getElementById('weather-location-input') as HTMLInputElement
+    return weatherInput.value;
 }
 
 function getDayOfWeek(): string {
