@@ -2,15 +2,13 @@ import { DayOfWeek, WeatherIcon, WeatherIcontype, WeatherResponse } from "../mod
 
 // TODO: Create references for all the html elements
 export const buttonClick = document.getElementById("button-location");
+export const mainDiv = document.getElementById("main-div") as HTMLDivElement;
+export const loader = document.getElementById("loader") as HTMLDivElement;
 const WeatherIconPng = document.getElementById("weather-icon");
-const mainDiv = document.getElementById("main-div") as HTMLDivElement;
-const loader = document.getElementById("loader") as HTMLDivElement;
 
 // TODO: Create the logic of the function
 export const updateInteface = (weather: WeatherResponse): void => {
 
-    mainDiv.hidden = true;
-    loader.hidden = false;
     //Div - info side
     const temperatureMax = document.getElementById("text-temp-max") as HTMLHtmlElement;
     const temperatureMin = document.getElementById("text-temp-min") as HTMLInputElement;
@@ -35,8 +33,6 @@ export const updateInteface = (weather: WeatherResponse): void => {
     temperature.textContent = Math.floor(weather.main.temp).toString() + 'ºC';
     weatherDesc.textContent = weather.weather[0].main;
     changeWeatherIcon(weather.weather[0].icon)
-    mainDiv.hidden = false;
-    loader.hidden = true;
 }
 
 // TODO: Get the city from the input element
