@@ -11,19 +11,33 @@ import foggy from '../images/foggy.png';
 // TODO: Create the interface of Weather Response
 
 export interface WeatherResponse {
-
+    base: string;
+    main: Main;
+    name: string;
+    visibility: number;
+    weather: Weather;
 }
 
 interface Wind {
-
+    deg: number;
+    gust: number;
+    speed: number;
 }
 
 interface Weather {
-
+    description: string;
+    icon: string;
+    id: number;
+    main: string;
 }
 
 interface Main {
-
+    feels_like: number;
+    humidity: number;
+    pressure: number;
+    temp: number;
+    temp_max: number;
+    temp_min: number;
 }
 
 export const WeatherIcon = {
