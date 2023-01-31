@@ -15,7 +15,8 @@ export interface WeatherResponse {
     main: Main;
     name: string;
     visibility: number;
-    weather: Weather;
+    weather: [Weather];
+    wind: Wind;
 }
 
 interface Wind {
