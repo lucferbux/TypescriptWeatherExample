@@ -23,6 +23,8 @@ $button-background-color-dark: #ad92fd;
 
 :root {
 	--gradient: linear-gradient( 135deg, #72EDF2 10%, #5151E5 100%);
+	--gradient2: linear-gradient( 90deg, #43cfaf 0%, #e4da3a 50%);
+	--gradient3: linear-gradient( 90deg, #d35b16 0%, #de3ae4 50%);
 }
 
 * {
@@ -153,7 +155,7 @@ body {
 	float: left;
 	height: 100%;
 	padding-top: 25px;
-  min-width: 300px;
+	min-width: 300px;
 }
 
 .today-info {
@@ -280,4 +282,72 @@ body {
 	color: $text-color-light;
 	font-weight: 700;
 	
+}
+
+// new features
+
+.location-button-empty {
+	outline: none;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	border: none;
+	border-radius: 8px;
+	padding: 10px;
+	font-family: 'Montserrat', sans-serif;
+	background-image: var(--gradient2);
+	color: #cd1d78;
+	font-weight: 700;
+	-webkit-box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.25);
+	        box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+	-webkit-transition: -webkit-transform 200ms ease;
+	transition: -webkit-transform 200ms ease;
+	-o-transition: transform 200ms ease;
+	transition: transform 200ms ease;
+	transition: transform 200ms ease, -webkit-transform 200ms ease;
+}
+
+.location-button-notfound {
+	outline: none;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	border: none;
+	border-radius: 8px;
+	padding: 10px;
+	font-family: 'Montserrat', sans-serif;
+	background-image: var(--gradient3);
+	color: #ffffff;
+	font-weight: 700;
+	-webkit-box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.25);
+	        box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+	-webkit-transition: -webkit-transform 200ms ease;
+	transition: -webkit-transform 200ms ease;
+	-o-transition: transform 200ms ease;
+	transition: transform 200ms ease;
+	transition: transform 200ms ease, -webkit-transform 200ms ease;
+}
+
+.container .weather-gradient-empty {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #343d4b;
+	border-radius: 25px;
+	opacity: 0.8;
+}
+
+.container .weather-gradient-notfound {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-image: var(--gradient3);
+	border-radius: 25px;
+	opacity: 0.8;
 }

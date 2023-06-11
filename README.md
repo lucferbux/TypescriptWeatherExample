@@ -58,6 +58,14 @@ To create a development build:
 npm run build-dev
 ```
 
+## Added New Features
+1. No country name filled request control.
+![Empty](/meta/emptyField.png)
+
+1. Bad country name filled request control.
+![BadCountry](/meta/notfoundCity.png)
+
+
 ## Networking
 
 The weather information is requested by the [open weather map API](https://openweathermap.org/current). It uses a free api token uploaded to be ready to use, feel free to create a new one for personal use.
