@@ -11,6 +11,10 @@ import foggy from '../images/foggy.png';
 // TODO: Create the interface of Weather Response
 
 export interface WeatherResponse {
+    wind: any;
+    name: string | null;
+    weather: any;
+    main: any;
 
 }
 
@@ -48,13 +52,13 @@ export const WeatherIcon = {
 } as const;
 
 export const DayOfWeek = [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday"
+    "Domingo",
+    "Lunes",
+    "Martes",
+    "Miércoles",
+    "Jueves",
+    "Viernes",
+    "Sábado"
 ];
 
 export type WeatherIcontype = keyof typeof WeatherIcon;
