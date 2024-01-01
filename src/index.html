@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webpack Weather</title>
+    <title>Webpack Weather App by Ines :)</title>
 </head>
 <body>
             <div class="container">
                 <div class="weather-side">
                     <div class="weather-gradient"></div>
                     <div class="date-container">
-                        <h2 id="date-dayname" class="date-dayname">---</h2><span id="date-day" class="date-day">--</span><span id="location-text" class="location">-</span>
+                        <span id="location-text" class="location">-</span> 
+                        <h2 id="date-dayname" class="date-dayname">---</h2>
+                        <span id="date-day" class="date-day">--</span>
+                        <span id="time" class="time">--</span>
                     </div>
                     <div class="weather-container"><img id="weather-icon" class="weather-icon" src="images/empty.png"></img>
                         <h1 id="weather-temp" class="weather-temp">--</h1>
@@ -35,12 +38,26 @@
                         </div>
                     </div>
 
-                    <div class="location-container"><button id="button-location" class="location-button"><span>Change location</span></button></div>
 
                     <div class="location-container-input"><input placeholder="city..." id="weather-location-input" class="location-input"> </input></div>
+                    <div class="location-container"><button id="button-location" class="location-button"><span>Change location</span></button></div>
+
                 </div>
             </div>
 
     </div>
+    <div id="spinner" style="display: none;">
+        <img src="images/spinner-white.gif" alt="Loading...">
+    </div>
+    
+    <div id="error-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <span id="error-message"></span>
+        </div>
+    </div>
+
+    
+    
 </body>
 </html>
