@@ -6,11 +6,11 @@
 
 ## Requirements
 
-* [Node](https://nodejs.org/en/)
+- [Node](https://nodejs.org/en/)
 
 ## Introduction
 
-* **[Webpack](https://webpack.js.org)** -> Webpack is a bundler for modules. Main purpose is to bundle JavaScript modules in a browser.
+- **[Webpack](https://webpack.js.org)** -> Webpack is a bundler for modules. Main purpose is to bundle JavaScript modules in a browser.
 
 ## Goal
 
@@ -28,11 +28,14 @@ npm install
 
 2. Start modifying the html, css and javascript files located in **src** folder.
 
-3. To start livewatch just run  the following command.
+3. To start livewatch just run the following command.
 
 ```bash
 npm run start:dev
 ```
+
+\* to close:
+control + c
 
 4. To deploy a new version just run `npm run build-prod`
 
@@ -65,4 +68,3 @@ The weather information is requested by the [open weather map API](https://openw
 ## Credits
 
 The layout is based in [this project ](https://codepen.io/Call_in/pen/pMYGbZ) created by **Colin Espinas**.
-
