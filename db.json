@@ -1,0 +1,76 @@
+{
+    "weather-icons": [
+        {
+            "id": "01d",
+            "name": "sunny"
+        },
+        {
+            "id": "01n",
+            "name": "sunny"
+        },
+        {
+            "id": "02d",
+            "name": "clear-cloudy"
+        },
+        {
+            "id": "02n",
+            "name": "clear-cloudy"
+        },
+        {
+            "id": "03d",
+            "name": "cloudy"
+        },
+        {
+            "id": "03n",
+            "name": "cloudy"
+        },
+        {
+            "id": "04d",
+            "name": "mostly-cloudy"
+        },
+        {
+            "id": "04n",
+            "name": "mostly-cloudy"
+        },
+        {
+            "id": "09d",
+            "name": "showers"
+        },
+        {
+            "id": "09n",
+            "name": "showers"
+        },
+        {
+            "id": "10d",
+            "name": "drizzle"
+        },
+        {
+            "id": "10n",
+            "name": "drizzle"
+        },
+        {
+            "id": "11d",
+            "name": "thunderstroms"
+        },
+        {
+            "id": "11n",
+            "name": "thunderstroms"
+        },
+        {
+            "id": "13d",
+            "name": "snow"
+        },
+        {
+            "id": "13n",
+            "name": "snow"
+        },
+        {
+            "id": "50d",
+            "name": "foggy"
+        },
+        {
+            "id": "50n",
+            "name": "foggy"
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+<div [ngClass]="isSwalFired() ? 'swal-container' : 'container' ">
+  <app-weather-side [weather]="weather()" />
+  <app-info-side
+    [weather]="weather()"
+    (searchCity)="refreshCity($event)"
+    (isSwalFired)="handleIsSwalFired($event)"
+  />
+</div>

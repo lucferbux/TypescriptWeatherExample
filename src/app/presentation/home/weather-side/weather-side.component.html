@@ -1,0 +1,19 @@
+<div class="weather-side">
+  <div class="weather-gradient"></div>
+  <div class="date-container">
+    <h2 id="date-dayname" class="date-dayname">
+      {{ weather.dayOfTheWeek }}
+    </h2>
+    <span id="date-day" class="date-day">{{ weather.date }}</span
+    ><span id="location-text" class="location">{{ weather.city }}</span>
+  </div>
+  <div class="weather-container">
+    <img
+      id="weather-icon"
+      class="weather-icon"
+      [src]="'/assets/images/' + weather.icon + '.png'"
+    />
+    <h1 id="weather-temp" class="weather-temp">{{ weather.temp }}</h1>
+    <h3 id="weather-desc" class="weather-desc">{{ weather.weather }}</h3>
+  </div>
+</div>

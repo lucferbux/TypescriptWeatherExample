@@ -1,46 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webpack Weather</title>
+  <meta charset="utf-8">
+  <title>WeatherProject</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-            <div class="container">
-                <div class="weather-side">
-                    <div class="weather-gradient"></div>
-                    <div class="date-container">
-                        <h2 id="date-dayname" class="date-dayname">---</h2><span id="date-day" class="date-day">--</span><span id="location-text" class="location">-</span>
-                    </div>
-                    <div class="weather-container"><img id="weather-icon" class="weather-icon" src="images/empty.png"></img>
-                        <h1 id="weather-temp" class="weather-temp">--</h1>
-                        <h3 id="weather-desc" class="weather-desc">-</h3>
-                    </div>
-                </div>
-                <div class="info-side">
-                    <div class="today-info-container">
-                        <div class="today-info">
-                            <div class="precipitation"> <span class="title">MAX TEMP</span><span id="text-temp-max" class="value">- ºC</span>
-                                <div class="clear"></div>
-                            </div>
-                            <div class="precipitation"> <span class="title">MIN TEMP</span><span id="text-temp-min" class="value">- ºC</span>
-                                <div class="clear"></div>
-                            </div>
-                            <div class="humidity"> <span class="title">HUMIDITY</span><span id="text-humidity" class="value">- %</span>
-                                <div class="clear"></div>
-                            </div>
-                            <div class="wind"> <span class="title">WIND</span><span id="text-wind" class="value">- m/s</span>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="location-container"><button id="button-location" class="location-button"><span>Change location</span></button></div>
-
-                    <div class="location-container-input"><input placeholder="city..." id="weather-location-input" class="location-input"> </input></div>
-                </div>
-            </div>
-
-    </div>
+  <app-root></app-root>
 </body>
 </html>

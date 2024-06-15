@@ -1,0 +1,19 @@
+<form
+  [formGroup]="searchForm"
+  (submit)="filterCity(searchForm.value.searchTerm)"
+>
+  <div class="location-container">
+    <button id="button-location" class="location-button" type="submit">
+      <span>Change location</span>
+    </button>
+  </div>
+
+  <div class="location-container-input">
+    <input
+      formControlName="searchTerm"
+      placeholder="city..."
+      id="weather-location-input"
+      class="location-input"
+    />
+  </div>
+</form>

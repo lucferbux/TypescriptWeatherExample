@@ -1,0 +1,31 @@
+<div class="info-side">
+  <div class="today-info-container">
+    <div class="today-info">
+      <div class="precipitation">
+        <span class="title">MAX TEMP</span
+        ><span id="text-temp-max" class="value">{{ weather.maxTemp }} ºC</span>
+        <div class="clear"></div>
+      </div>
+      <div class="precipitation">
+        <span class="title">MIN TEMP</span
+        ><span id="text-temp-min" class="value">{{ weather.minTemp }} ºC</span>
+        <div class="clear"></div>
+      </div>
+      <div class="humidity">
+        <span class="title">HUMIDITY</span
+        ><span id="text-humidity" class="value">{{ weather.humidity }} %</span>
+        <div class="clear"></div>
+      </div>
+      <div class="wind">
+        <span class="title">WIND</span
+        ><span id="text-wind" class="value">{{ weather.windSpeed }} m/s</span>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <app-search-container
+    [foundCity]="weather"
+    (searchCity)="handleSearchCity($event)"
+    (isSwalFired)="handleIsSwalFired($event)"
+  />
+</div>

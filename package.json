@@ -1,30 +1,50 @@
 {
-    "name": "webpack-babel",
-    "version": "1.0.0",
-    "description": "Template of a Webpack Babel project",
-    "main": "index.js",
-    "scripts": {
-        "clean": "rm dist/bundle.js",
-        "build-dev": "webpack --mode development",
-        "build-prod": "webpack --mode production",
-        "start:dev": "webpack serve --mode development"
-    },
-    "devDependencies": {
-        "css-loader": "^6.8.1",
-        "favicons": "^7.1.2",
-        "favicons-webpack-plugin": "^6.0.0",
-        "file-loader": "^6.2.0",
-        "html-loader": "^4.2.0",
-        "html-webpack-plugin": "^5.5.0",
-        "mini-css-extract-plugin": "^2.7.6",
-        "node-sass": "^9.0.0",
-        "sass-loader": "^13.3.1",
-        "style-loader": "^3.3.3",
-        "ts-loader": "^9.4.3",
-        "typescript": "^5.0.4",
-        "url-loader": "^4.1.1",
-        "webpack": "^5.84.1",
-        "webpack-cli": "^5.1.1",
-        "webpack-dev-server": "^4.15.0"
-    }
+  "name": "weather-project",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "start:dev": "json-server db.json",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "serve:ssr:weather_project": "node dist/weather_project/server/server.mjs"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^17.0.0",
+    "@angular/common": "^17.0.0",
+    "@angular/compiler": "^17.0.0",
+    "@angular/core": "^17.0.0",
+    "@angular/forms": "^17.0.0",
+    "@angular/platform-browser": "^17.0.0",
+    "@angular/platform-browser-dynamic": "^17.0.0",
+    "@angular/platform-server": "^17.0.0",
+    "@angular/router": "^17.0.0",
+    "@angular/ssr": "^17.0.8",
+    "@sweetalert2/ngx-sweetalert2": "^12.3.0",
+    "express": "^4.18.2",
+    "install": "^0.13.0",
+    "json-server": "^1.0.0-beta.1",
+    "npm": "^10.8.1",
+    "rxjs": "~7.8.0",
+    "sweetalert2": "^11.11.1",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.2"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^17.0.8",
+    "@angular/cli": "^17.0.8",
+    "@angular/compiler-cli": "^17.0.0",
+    "@types/express": "^4.17.17",
+    "@types/jasmine": "~5.1.0",
+    "@types/node": "^18.18.0",
+    "jasmine-core": "~5.1.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "typescript": "~5.2.2"
+  }
 }
