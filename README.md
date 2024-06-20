@@ -6,7 +6,7 @@
 
 ## Description
 
-Final project for the Full Stack Development INESDI Master. The project consists of a weather application that allows you to search for the weather in a specific city. The application is developed with Angular 17 and Clean Archirecture.
+Final project for the Full Stack Development Module 1 INESDI Master. The project consists of a weather application that allows you to search for the weather in a specific city. The application is developed with Angular 17 and Clean Archirecture.
 
 ## Installation
 
