@@ -1,15 +1,15 @@
 {
     "compilerOptions": {
         "outDir": "./dist/",
-        "sourceMap": true,
+        "sourceMap": true,//cuando traspilemos seguimos arbol de relaciones 
         "strict": true,
         "noImplicitReturns": true,
         "noImplicitAny": true,
         "module": "es6",
-        "moduleResolution": "node",
+        "moduleResolution": "node",//paquetes
         "target": "es5",
-        "allowJs": true,
-        "downlevelIteration": true
+        "allowJs": true,//ficheros de java script y java en el mismo sitio
+        "downlevelIteration": true//aplicon 
     },
     "include": [
         "./src/**/*",
