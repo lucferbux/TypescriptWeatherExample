@@ -7,11 +7,14 @@ import { buttonClick, getCity, updateInteface } from './dom-manipulation/domMani
 
 
 export const displayWeather = async () => {
+    const button = document.getElementById('button-location') as HTMLButtonElement;
+    button.disabled =true;
     const city = getCity();
     if(city) {
         const weather = await getWeather(city);
         updateInteface(weather);
     } 
+    button.disabled = false;
 }
 
 if (buttonClick) buttonClick.addEventListener('click', displayWeather);
