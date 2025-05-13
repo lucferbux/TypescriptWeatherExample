@@ -9,7 +9,8 @@ const config = {
   devtool: "inline-source-map",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    filename: "main.js",
+    hashFunction: "xxhash64",
   },
   module: {
     rules: [
@@ -56,9 +57,6 @@ const config = {
     static: path.join(__dirname, "dist"),
     compress: true,
     port: 9000,
-  },
-  output: {
-    hashFunction: "xxhash64",
   },
 };
 
