@@ -42,5 +42,16 @@
             </div>
 
     </div>
+
+    <!-- Spinner element -->
+<div id="spinner" style="display:none;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:1000;">
+    <div style="border:8px solid #f3f3f3;border-top:8px solid #3913B8;border-radius:50%;width:48px;height:48px;animation:spin 1s linear infinite;"></div>
+</div>
+<style>
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+</style>
 </body>
 </html>
