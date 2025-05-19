@@ -9,6 +9,7 @@
         "dev": "webpack serve --mode development"
     },
     "devDependencies": {
+        "@types/node": "^22.15.19",
         "css-loader": "^7.1.2",
         "favicons": "^7.2.0",
         "favicons-webpack-plugin": "^6.0.1",
